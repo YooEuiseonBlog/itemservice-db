@@ -27,6 +27,14 @@ import java.util.Optional;
 public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
 
     private final JdbcTemplate template;
+//    private final RowMapper<Item> itemRowMapper = (rs, rowNum) -> {
+//        Item item = new Item();
+//        item.setId(rs.getLong("id"));
+//        item.setItemName(rs.getString("item_name"));
+//        item.setPrice(rs.getInt("price"));
+//        item.setQuantity(rs.getInt("quantity"));
+//        return item;
+//    };
 
     public JdbcTemplateItemRepositoryV1(DataSource dataSource) {
         this.template = new JdbcTemplate(dataSource);
